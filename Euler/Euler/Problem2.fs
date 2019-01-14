@@ -29,6 +29,25 @@ let ``Even Fibonacci numbers`` () =
     Assert.Equal(3, result.[3])
     Assert.Equal(5, result.[4])
     
+let rec fib n =
+    match n with
+    | n when n < 1 -> 0
+    | 1 -> 1
+    | _ -> fib (n - 1) + fib (n - 2) 
+    
+[<Fact>]
+let ``fibonacci numbers`` () =
+    Assert.Equal(1, fib 1)
+    Assert.Equal(1, fib 2)
+    Assert.Equal(2, fib 3)
+    Assert.Equal(3, fib 4)
+    Assert.Equal(5, fib 5)
+    
+[<Fact>]
+let ``fibonacci numbers edge cases`` () =
+    Assert.Equal(0, fib 0)
+    Assert.Equal(0, fib -1)
+    
 [<Fact>]
 let ``sum the evens`` () =
     Assert.Equal(20, sumEvens [1..9]) 
