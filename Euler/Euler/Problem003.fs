@@ -2,15 +2,7 @@ module Problem3
 
 open System
 open Xunit
-
-let isPrime(n : int64) =
-    let rec calc(n : int64, i : int64) =
-        match n with
-        | 1L -> false
-        | n when (i = n) -> true
-        | n when (n % i = 0L) -> false
-        | _ -> calc(n, i+1L)
-    calc(n, 2L)
+open Primes
 
 let factors(n : int64) =
     let rec calc(n : int64, i : int64, max: int64, results: List<int64>) =
