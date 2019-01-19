@@ -4,13 +4,12 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Problem1.fs" />
-    <Compile Include="Problem2.fs" />
-    <Compile Include="Problem3.fs" />
-    <Compile Include="Problem4.fs" />
-    <Compile Include="Problem5.fs" />
-    <Compile Include="Problem6.fs" />
-    <Compile Include="Program.fs" />
+    <Compile Include="Problem001.fs" />
+    <Compile Include="Problem002.fs" />
+    <Compile Include="Problem003.fs" />
+    <Compile Include="Problem004.fs" />
+    <Compile Include="Problem005.fs" />
+    <Compile Include="Problem006.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
