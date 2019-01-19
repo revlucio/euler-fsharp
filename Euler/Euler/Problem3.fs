@@ -23,7 +23,7 @@ let factors(n : int64) =
     |> List.sort
     
 let largestPrimeFactor(x : int64) =
-    (factors x |> List.filter isPrime |> List.sortDescending).[0] 
+    (factors x |> List.filter isPrime |> List.sortDescending).Head 
 
 [<Fact>]
 let ``is Prime`` () =
