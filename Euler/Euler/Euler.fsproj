@@ -12,6 +12,7 @@
     <Compile Include="Problem005.fs" />
     <Compile Include="Problem006.fs" />
     <Compile Include="Problem007.fs" />
+    <Compile Include="Problem008.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
