@@ -4,7 +4,7 @@ open Xunit
 open System
 
 let hugeNumber() = 
-    let num ="
+    "
 73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
 85861560789112949495459501737958331952853208805511
@@ -26,7 +26,6 @@ let hugeNumber() =
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450
     "
-    num
         .Replace("\n", "")
         .Replace(" ", "")
         .ToCharArray()
@@ -37,14 +36,15 @@ let hugeNumber() =
 let productOf arr = arr |> List.reduce (fun arr n -> arr * n)
     
 let largestProductWithDigits n =
-    let rec calc n i max =
+    let rec calc i max =
         let product = productOf(hugeNumber().[i..(n+i-1)]) 
+        
         match i with 
         | i when (hugeNumber().Length - n) = i -> max
-        | i when product > max -> calc n (i+1) product
-        | _ -> calc n (i+1) max
+        | i when product > max -> calc (i+1) product
+        | _ -> calc (i+1) max
         
-    calc n 0 0L
+    calc 0 0L
 
 [<Fact>]
 let ``products of digits`` () =
